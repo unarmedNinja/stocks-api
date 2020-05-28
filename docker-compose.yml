@@ -1,0 +1,9 @@
+version: '3'
+services:
+     database:
+          image: ${IMAGE}
+          container_name: ${CONTAINERNAME}
+          environment:
+            - SPRING_PROFILES_ACTIVE=dev          
+          ports:
+            - ${PORT1}:80
