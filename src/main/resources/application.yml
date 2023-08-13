@@ -1,0 +1,8 @@
+server:
+  port: 8082
+stock:
+  api:
+    key: br1ausnrh5reisn51hd0
+    url:
+      base: https://finnhub.io/api/v1
+      quote: /quote

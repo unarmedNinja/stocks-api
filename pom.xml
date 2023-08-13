@@ -74,5 +74,12 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<profiles>
+		<profile>
+			<id>local</id>			
+		</profile>
+		<profile>
+			<id>development</id>			
+		</profile>
+	</profiles>
 </project>

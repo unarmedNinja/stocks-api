@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stocks-api-demo
+  namespace: stocks-api
+  labels:
+    purpose: demonstrate-envars
+    app: stocks-api-app
+spec:
+  containers:
+  - name: stocks-api-container
+    image: stocksapi:beta
+    ports:
+    - containerPort: 8082
+    env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: local
+    - name: DEMO_FAREWELL
+      value: "Such a sweet sorrow"

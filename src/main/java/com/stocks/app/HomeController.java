@@ -31,6 +31,9 @@ public class HomeController {
     @Value("${stock.api.key}")
     private String apiKey;
 
+    @Value("${jwt.key}")
+    private String jwtKey;
+
     @GetMapping(value = "/")
     public String home(@RequestParam String param) {
         return "hello " + param;
@@ -39,6 +42,11 @@ public class HomeController {
     @GetMapping(value = "/key")
     public String key() {
         return apiKey;
+    }
+
+    @GetMapping(value = "/jwt")
+    public String jwt() {
+        return jwtKey;
     }
 
     @GetMapping(value = "/quote/{symbol}")
